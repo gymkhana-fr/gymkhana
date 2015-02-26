@@ -1,8 +1,7 @@
 <template name="nav">
   <nav class="navbar" role="navigation">
-      <a href="/" class="navbar-header navbar-brand" ><img src="logo.png" alt="{{blogTitle}}"></a>
+      <a href="/" class="navbar-header navbar-brand"><img src="logo.png" alt="{{blogTitle}}"></a>
     <ul class="nav navbar-nav">
-      <li><a href="/">Sommaire</a></li>
       {{#each pages}}
       <li><a href="{{pathFor 'contribution' folder='pages' slug=this.slug owner=repo.owner repo=repo.repo}}" class="{{this.slug}}">{{this.title}}</a></li>
       {{/each}}
